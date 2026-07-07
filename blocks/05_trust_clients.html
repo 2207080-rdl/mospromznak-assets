@@ -1,0 +1,107 @@
+<!-- ═══ Блок T123 №5: С КЕМ РАБОТАЕМ + КЛИЕНТЫ (тёмный) ═══ -->
+<style>
+/* ════════════════════════════════════════════════════════════
+   БЛОК 5 · С КЕМ РАБОТАЕМ + КЛИЕНТЫ (тёмный)
+   ════════════════════════════════════════════════════════════ */
+.section--dark .lead { color: rgba(255,255,255,0.75); }
+
+.trust-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+.trust-stat { padding: 44px 40px 44px 0; display: flex; flex-direction: column; gap: 16px; border-right: 1px solid rgba(255,255,255,0.14); }
+.trust-stat + .trust-stat { padding-left: 40px; }
+.trust-stat:last-child { border-right: none; padding-right: 0; }
+.trust-stat__num {
+  font-family: var(--font-head);
+  font-size: 76px; font-weight: 700; line-height: 1; color: #fff;
+  font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
+}
+.trust-stat__num span { font-size: 30px; font-weight: 600; color: var(--brand-red); margin-left: 6px; }
+.trust-stat__label { font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.6); }
+.trust-stat__label strong { display: block; font-family: var(--font-head); font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+@media (max-width: 960px) {
+  .trust-stats { grid-template-columns: 1fr; }
+  .trust-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.14); padding: 32px 0; }
+  .trust-stat + .trust-stat { padding-left: 0; }
+  .trust-stat:last-child { border-bottom: none; }
+}
+
+.client-strip-head { margin: 72px 0 28px; }
+.client-strip-head h3 { font-size: 20px; }
+.client-strip {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px;
+  background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.10);
+}
+.client {
+  background: var(--brand-bg-dark);
+  min-height: 104px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  transition: background 0.2s var(--ease);
+}
+.client:hover { background: #222; }
+.client--logo img { max-height: 44px; max-width: 130px; width: auto; object-fit: contain; filter: grayscale(1) brightness(1.9); opacity: 0.75; transition: filter 0.25s var(--ease), opacity 0.25s var(--ease); }
+.client:hover img { filter: grayscale(0) brightness(1); opacity: 1; }
+.client--text {
+  font-family: var(--font-head);
+  font-size: 14px; font-weight: 500; text-align: center; line-height: 1.35;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s var(--ease);
+}
+.client--text:hover { color: #fff; }
+@media (max-width: 1100px) { .client-strip { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px)  { .client-strip { grid-template-columns: repeat(2, 1fr); } }
+
+</style>
+<section class="section section--dark" data-screen-label="04 С кем работаем">
+  <div class="container">
+    <div class="section__head reveal">
+      <div>
+        <span class="eyebrow eyebrow--ondark">С кем работаем</span>
+        <h2>19 контрактов по 44-ФЗ и 223-ФЗ. Прямые и через интегратора.</h2>
+      </div>
+      <p class="lead">РЖД, метрополитен Москвы, Минобороны через ФКУ «Управление ВВО», Россети, Минобрнауки, МГИМО, ВГУ — реестр госконтрактов открыт и проверяем.</p>
+    </div>
+
+    <div class="trust-stats reveal">
+      <div class="trust-stat">
+        <div class="trust-stat__num">13+<span>лет</span></div>
+        <div class="trust-stat__label"><strong>На рынке производства</strong>Завод работает с 2012 года. Без смены адреса.</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat__num">19</div>
+        <div class="trust-stat__label"><strong>Контрактов по 44-ФЗ и 223-ФЗ</strong>2 прямых контракта РЖД, метрополитен Москвы, Минобороны, Россети.</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat__num">100<span>%</span></div>
+        <div class="trust-stat__label"><strong>Производство полного цикла</strong>Металл, электроника, ПО, светотехника, монтаж — на одной площадке.</div>
+      </div>
+    </div>
+
+    <div class="client-strip-head reveal">
+      <h3>Заказчики и партнёры</h3>
+    </div>
+    <div class="client-strip reveal">
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/rzd.svg" alt="РЖД" /></span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/metro_moscow.png" alt="Метро Москвы" /></span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/metro_spb.svg" alt="Метро Санкт-Петербурга" /></span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/minskmetrostroy.png" alt="Минскметрострой" /></span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/kamaz.png" alt="КАМАЗ" /></span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/tatneft.svg" alt="Татнефть" /></span>
+      <span class="client client--text">Газпром гелий сервис</span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/rosseti.png" alt="Россети" /></span>
+      <span class="client client--text">Минобороны РФ</span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/mgimo_clean.png" alt="МГИМО" /></span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/vsu_clean.png" alt="Воронежский ГУ" /></span>
+      <span class="client client--text">Минобрнауки РФ</span>
+      <span class="client client--text">ТК Митинский Радиорынок</span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/hormonelife.png" alt="Hormon Life" /></span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/cepp.png" alt="ЦЭПП" /></span>
+      <span class="client client--text">Skynet</span>
+      <span class="client client--text">Росгвардия</span>
+      <span class="client client--logo"><img src="https://2207080-rdl.github.io/mospromznak-assets/assets/logos/mts_live_hall.svg" alt="МТС Live Холл" /></span>
+    </div>
+  </div>
+</section>

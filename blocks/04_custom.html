@@ -1,0 +1,89 @@
+<!-- ═══ Блок T123 №4: КАСТОМИЗАЦИЯ (#custom) ═══ -->
+<style>
+/* ════════════════════════════════════════════════════════════
+   БЛОК 4 · КАСТОМИЗАЦИЯ (#custom)
+   ════════════════════════════════════════════════════════════ */
+.custom { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 80px; align-items: start; }
+.custom__copy .eyebrow { margin-bottom: 0; }
+.custom__copy h2 { margin-top: 18px; }
+.custom__copy .lead { margin: 24px 0 0; }
+.custom__media { position: sticky; top: 108px; }
+.custom__media img { width: 100%; height: auto; border: 1px solid var(--brand-line); }
+.custom__media::after {
+  content: ''; display: block;
+  width: 120px; height: 4px; background: var(--brand-red); margin-top: -4px;
+  position: relative; z-index: 2;
+}
+
+.custom-cycle { margin: 48px 0; }
+.custom-cycle__title {
+  font-family: var(--font-head);
+  font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--brand-text-muted); margin: 0 0 20px;
+}
+.custom-cycle__grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--brand-line); border: 1px solid var(--brand-line); }
+.custom-cycle__card {
+  background: var(--brand-bg);
+  padding: 26px 24px;
+  display: flex; flex-direction: column; gap: 8px;
+  transition: background 0.18s var(--ease);
+}
+.custom-cycle__card:hover { background: #FCFCFC; }
+.custom-cycle__icon {
+  width: 40px; height: 40px; color: var(--brand-red); margin-bottom: 6px;
+}
+.custom-cycle__icon svg { width: 100%; height: 100%; }
+.custom-cycle__card strong {
+  font-family: var(--font-head);
+  font-size: 16px; font-weight: 600; color: var(--brand-graphite); line-height: 1.3;
+}
+.custom-cycle__card span:last-child { font-size: 14px; line-height: 1.5; color: var(--brand-text-muted); }
+
+@media (max-width: 1100px) {
+  .custom { grid-template-columns: 1fr; gap: 48px; }
+  .custom__media { position: static; order: -1; max-width: 560px; }
+}
+
+</style>
+<section class="section section--soft" id="custom" data-screen-label="03 Кастомизация">
+  <div class="container">
+    <div class="custom">
+      <div class="custom__copy reveal">
+        <span class="eyebrow">Кастомизация</span>
+        <h2>Разрабатываем оборудование под ваше техническое задание</h2>
+        <p class="lead">Принесите ТЗ или техническую идею — спроектируем, произведём и сдадим в эксплуатацию. Один договор от концепции до акта.</p>
+
+        <div class="custom-cycle">
+          <h4 class="custom-cycle__title">Полный цикл услуг</h4>
+          <div class="custom-cycle__grid2">
+            <div class="custom-cycle__card">
+              <span class="custom-cycle__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7" /><path d="M16 16l5 5" /></svg></span>
+              <strong>Предпроектная экспертиза</strong>
+              <span>Анализируем объект и потоки посетителей, рассчитываем места установки терминалов.</span>
+            </div>
+            <div class="custom-cycle__card">
+              <span class="custom-cycle__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-3l13-13 3 3-13 13H3z" /><path d="M13 7l3 3" /></svg></span>
+              <strong>Концепция и техническое задание</strong>
+              <span>Готовим иллюстрированную концепцию. Инженер вместе с вами составляет ТЗ под закупку.</span>
+            </div>
+            <div class="custom-cycle__card">
+              <span class="custom-cycle__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6.6 6.6 2 2 6.6-6.6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5z" /></svg></span>
+              <strong>Установка и настройка</strong>
+              <span>Монтаж на объекте, настройка ПО ИНДОРУМ под сценарий, обучение персонала.</span>
+            </div>
+            <div class="custom-cycle__card">
+              <span class="custom-cycle__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" /></svg></span>
+              <strong>Профессиональная IT-поддержка</strong>
+              <span>Обновления ПО, мониторинг работы, замена комплектующих по гарантии.</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#cta" class="btn btn--primary">Описать задачу <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+      <div class="custom__media reveal">
+        <img src="https://2207080-rdl.github.io/mospromznak-assets/assets/photos/proektirovanie_mospromznak_1.jpg" alt="Проектирование оборудования МОСПРОМЗНАК" />
+      </div>
+    </div>
+  </div>
+</section>
